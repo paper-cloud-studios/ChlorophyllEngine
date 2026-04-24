@@ -1,0 +1,54 @@
+{
+  "name": "workspace",
+  "nodes": [
+    {
+      "name":      "World",
+      "tag":       "root",
+      "parent":    "",
+      "transform": { "x": 0, "y": 0, "rotation": 0, "sx": 1, "sy": 1 },
+      "components": {}
+    },
+    {
+      "name":      "Camera",
+      "tag":       "editor_cam",
+      "parent":    "World",
+      "transform": { "x": 0, "y": 0, "rotation": 0, "sx": 1, "sy": 1 },
+      "components": {
+        "camera": { "zoom": 1.0, "current": true }
+      }
+    },
+    {
+      "name":      "NodeA",
+      "tag":       "",
+      "parent":    "World",
+      "transform": { "x": -120, "y": 0, "rotation": 0, "sx": 40, "sy": 40 },
+      "components": {
+        "sprite":    { "z": 0 },
+        "collision": { "half_w": 20, "half_h": 20, "solid": true, "trigger": false },
+        "velocity":  { "damping": 0.0 }
+      },
+      "properties": {}
+    },
+    {
+      "name":      "NodeB",
+      "tag":       "",
+      "parent":    "World",
+      "transform": { "x": 0, "y": 80, "rotation": 0, "sx": 200, "sy": 24 },
+      "components": {
+        "sprite":    { "z": -1 },
+        "collision": { "half_w": 100, "half_h": 12, "solid": true, "trigger": false }
+      },
+      "properties": {}
+    },
+    {
+      "name":      "NodeA_Child",
+      "tag":       "",
+      "parent":    "NodeA",
+      "transform": { "x": 0, "y": -40, "rotation": 0, "sx": 20, "sy": 20 },
+      "components": {
+        "sprite":    { "z": 1 }
+      },
+      "properties": {}
+    }
+  ]
+}
